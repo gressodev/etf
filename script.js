@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         yearsRange.value = e.target.value;
     });
 
+    // Auto-select text on focus for easier editing
+    tickerInput.addEventListener('focus', function () {
+        this.select();
+    });
+
     // Fetch button listener
     fetchBtn.addEventListener('click', () => {
         const ticker = tickerInput.value.toUpperCase();
